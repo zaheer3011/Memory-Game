@@ -1,0 +1,76 @@
+.App {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input-box {
+  padding: 4px 8px;
+  margin-left: 5px;
+}
+
+.reset-btn {
+  margin-left: 1rem;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+.score-node {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.score-box,
+.limit-box {
+  color: green;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-top: 13px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.cards-container {
+  display: grid;
+  
+}
+
+.card-cell {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: .8s ease;
+}
+
+.won-btn {
+  color: green;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 3rem;
+  animation: animeBounce 2s ease infinite;
+}
+
+@keyframes animeBounce {
+ 70% { transform:translateY(0%); }
+    80% { transform:translateY(-15%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-7%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-3%); }
+    100% { transform:translateY(0); }
+}
+
