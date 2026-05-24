@@ -46,6 +46,12 @@ const Gaming = () => {
   }
 
   const checkMatch = (secondCardId) => {
+
+    if(limitedFlip === 0) {
+      toast.info("You have reached your limit...");
+      initializeGame();
+  }
+    
     const [firstCardId] = isFlipped;
 
     // To check both value are equal
@@ -102,12 +108,6 @@ const Gaming = () => {
   const myFlipped = (id) => {
     return isFlipped.includes(id) || isSolved.includes(id);
   }
-
-  if(limitedFlip === 0) {
-    initializeGame();
-    toast.error("You have reached your limit...");
-}
-  
   
   useEffect(() => {
     
