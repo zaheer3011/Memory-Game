@@ -46,11 +46,6 @@ const Gaming = () => {
   }
 
   const checkMatch = (secondCardId) => {
-
-    if(limitedFlip === 0) {
-      toast.info("You have reached your limit...");
-      initializeGame();
-  }
     
     const [firstCardId] = isFlipped;
 
@@ -77,6 +72,11 @@ const Gaming = () => {
       const updateFlip = prev - 1;
       return updateFlip;
     })
+
+    if(limitedFlip === 0) {
+      toast.info("You have reached your limit...");
+      initializeGame();
+    }
   }
 
   const handleOnClick = (id) => {
